@@ -33,6 +33,7 @@ const App = () => {
   const addNewPerson = (personData) => {
     setPersons(prev => {
       return [personData, ...prev];
+      
     })
   };
 
