@@ -1,7 +1,7 @@
 .form {
   padding: 15px;
   background: #d2d8f4;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border-radius: 10px;
   box-shadow: 10px 3px 10px 0px rgb(12 12 12 / 20%);
 }
@@ -11,16 +11,5 @@
   border-radius: 10px;
   border: none;
   width: 90%;
-  margin: 5px;
-}
-
-.form button {
-  width: 50%;
-  padding: 5px;
-  border: none;
-  margin: 5px;
-  border-radius: 10px;
-  background: #896fbc;
-  color: #e3e3e3;
-  cursor: pointer;
+  margin: 5px 0;
 }

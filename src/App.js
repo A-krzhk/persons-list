@@ -1,7 +1,12 @@
+import React, { useState } from "react";
+
 import PersonList from "./components/PersonsList/PersonList";
 import Form from "./components/Form/Form";
+// import Modal from "./components/UI/Modal";
+
+
 import './App.css';
-import React, { useState } from "react";
+
 
 const INITIAL_PERSONS = [
   {

@@ -1,4 +1,5 @@
 .wrapper {
   width: 70vw;
   max-width: 650px;
+  margin: 0 auto;
 }
