@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import PersonList from "./components/PersonsList/PersonList";
+import Form from "./components/Form/Form";
 import './App.css';
+import React, { useState } from "react";
 
-function App() {
+const INITIAL_PERSONS = [
+  {
+    name: 'John',
+    age: 17,
+    key: 12348233
+  },
+  {
+    name: 'Alis',
+    age: 35,
+    key: 123482247
+  },
+  {
+    name: 'Mark',
+    age: 64,
+    key: 22338264
+  }
+];
+
+const App = () => {
+  
+  const [persons, setPersons] = useState(INITIAL_PERSONS);
+
+  const addNewPerson = (personData) => {
+    setPersons(prev => {
+      return [personData, ...prev];
+    })
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Form onSubmitHandler={addNewPerson}/>
+      <PersonList persons = {persons} />
     </div>
   );
 }
